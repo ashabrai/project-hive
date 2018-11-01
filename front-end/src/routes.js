@@ -1,7 +1,7 @@
-export const SIGNUP_BACKEND ='/signup';
-export const LOGIN_BACKEND = '/login';
+export const SIGNUP_BACKEND = '/user/signup';
+export const LOGIN_BACKEND = '/user/auth/login';
 
 export const LOGIN = '/login';
-export const ROOT ='/';
+export const ROOT = '/';
 export const DASHBOARD = '/dashboard';
-export const SIGNUP_FRONTEND ='/signup';
+export const SIGNUP_FRONTEND = '/signup';

@@ -1,3 +1,5 @@
+
+
 const initialState = null;
 
 export default (state = initialState, { type, payload }) => {

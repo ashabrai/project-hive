@@ -5,11 +5,11 @@ import Dashboard from '../dashboard/dashboard';
 import AuthRedirect from '../auth-redirect/auth-redirec';
 
 class App extends React.Component {
-  render(){
-    return(
+  render() {
+    return (
       <div>
         <BrowserRouter>
-          <div>
+          <div style={{ padding: '20px' }}>
             <Route path ='*' component={AuthRedirect}/>
             <Route exact path='/' component={Landing}/>
             <Route exact path='/signup' component={Landing}/>
