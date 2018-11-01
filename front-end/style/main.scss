@@ -1,0 +1,30 @@
+$background-color: #000000;
+$font-color : #FFFFFF;
+html, body{
+  background: $background-color;
+}
+
+p,h1,h2,ul {
+  color: $font-color;
+}
+
+.formLayout {
+  border-height: 100px;
+  border-width: 200px;
+  border-style: dashed;
+
+
+}
+input {
+  border-color: aqua;
+  border-width: 20px;
+}
+
+.signUp {
+  width:158px;
+  height: 47px;
+}
+button {
+  width:158px;
+}
+

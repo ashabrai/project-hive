@@ -5,17 +5,17 @@ import PropTypes from 'prop-types';
 import * as routes from '../../routes';
 
 class AuthRedirect extends React.Component {
-  render(){
+  render() {
     const { location, token } = this.props;
     const { pathname } = location;
     let destinationRoute = null;
-    if(pathname === routes.LOGIN || pathname === routes.SIGNUP_FRONTEND
-      || pathname === routes.ROOT){
-      if(token){
+    if (pathname === routes.LOGIN || pathname === routes.SIGNUP_FRONTEND
+      || pathname === routes.ROOT) {
+      if (token) {
         destinationRoute = routes.DASHBOARD;
       }
-    } else if(!token){
-      destinationRoute = routes.ROOTS;
+    } else if (!token) {
+      destinationRoute = routes.ROOT;
     }
     console.log('DESTINATION_ROUTE', destinationRoute);
     return (
@@ -31,7 +31,7 @@ AuthRedirect.propTypes = {
   location: PropTypes.object,
 };
 
-const mapStateToProps = state =>({
+const mapStateToProps = state => ({
   token: state.token,
 });
 
