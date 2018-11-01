@@ -1,0 +1,81 @@
+{
+  "name": "project-hive",
+  "version": "1.0.0",
+  "description": "A raspberry pi running a restful API. Includes a database to manage user data including events and hashed access codes.",
+  "main": "src/app.js",
+  "dependencies": {
+    "aws-sdk": "^2.345.0",
+    "aws-sdk-mock": "^4.2.0",
+    "bcrypt": "^3.0.2",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "fs-extra": "^7.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "http-errors": "^1.7.1",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.3.8",
+    "multer": "^1.4.1",
+    "node": "^11.0.0",
+    "node-aplay": "^1.0.3",
+    "npm-watch": "^0.4.0",
+    "onoff": "^3.2.2",
+    "prop-types": "^15.6.2",
+    "raspicam": "^0.2.14",
+    "react": "^16.6.0",
+    "react-cookie": "^3.0.4",
+    "react-router-dom": "^4.3.1",
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.5",
+    "superagent": "^4.0.0-beta.5",
+    "uuid": "^3.3.2",
+    "watch": "^1.0.2",
+    "webpack": "^4.23.1",
+    "webpack-dev-server": "^3.1.10",
+    "webpack-merge": "^4.1.4",
+    "winston": "^3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.26.2",
+    "faker": "^4.1.0",
+    "jest": "^23.6.0",
+    "webpack-cli": "^3.1.2"
+  },
+  "scripts": {
+    "start": "node src/app.js",
+    "watch": "webpack-dev-server --config webpack.dev.js",
+    "test": "eslint . && jest --coverage --collectCoverageFrom=src/lib/*.js --collectCoverageFrom=src/routes/*.js --collectCoverageFrom=src/__test__/lib/*-mock.js --collectCoverageFrom=!src/lib/error-middleware.js --forceExit --runInBand",
+    "jestSF": "./node_modules/jest/bin/jest.js --coverage --forceExit --runInBand $1",
+    "justJest": "jest --coverage --forceExit --runInBand",
+    "justLint": "./node_modules/eslint/bin/eslint.js ./src/*.js",
+    "start-server": "./makesure.sh; node ./src/app.js",
+    "dbDevOn": "mkdir -p ./testdb && mongod --dbpath ./testdb",
+    "devDbOff": "./killDevDb.sh",
+    "dbOn": "mkdir -p ./db && mongod --dbpath ./db",
+    "dbOff": "killall mongod",
+    "signup": "./presentation/test-hive.sh signup",
+    "arm": "./presentation/test-hive.sh arm",
+    "disarm": "./presentation/test-hive.sh disarm",
+    "more-signups": "./presentation/test-hive.sh more-signups"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bgwest/project-hive.git"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/src/__test__/lib/test.env.js"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bgwest/project-hive/issues"
+  },
+  "homepage": "https://github.com/bgwest/project-hive#readme"
+}
