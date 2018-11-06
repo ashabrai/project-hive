@@ -26,6 +26,7 @@ class Landing extends React.Component {
   };
 
   render() {
+
     const rootJSX = <div>
       <h2> Welcome to Save the Hive </h2>
       <Link to='signup'>Create an Account </Link>
@@ -33,7 +34,7 @@ class Landing extends React.Component {
     </div>;
 
     const signUpJSX = <div>
-      <h2> Create and Account </h2>
+      <h2> Create a Account </h2>
       <AuthForm type='signup' onComplete={this.handleSignup}/>
       <p> Already a member? </p>
       <Link to='/login'> Login Here </Link>
@@ -45,6 +46,11 @@ class Landing extends React.Component {
       <p> Do not have an account? </p>
       <Link to='/signup'>Account Creation</Link>
     </div>;
+
+      const armJSX = <div>
+        <h2> ENTER ACCESS CODE </h2>
+        <AccessForm type ='arm' onComplete={this.handleSubmit}/>
+      </div>
 
     const { location } = this.props;
 

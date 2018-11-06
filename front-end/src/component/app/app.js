@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Landing from '../landing/landing';
 import Dashboard from '../dashboard/dashboard';
-import AuthRedirect from '../auth-redirect/auth-redirec';
+import AuthRedirect from '../auth-redirect/auth-redirect';
 
 class App extends React.Component {
   render() {
@@ -15,6 +15,8 @@ class App extends React.Component {
             <Route exact path='/signup' component={Landing}/>
             <Route exact path='/login' component={Landing}/>
             <Route exact path='/dashboard' component={Dashboard}/>
+            <Route exact path='/arm/:id' component={Dashboard}/>
+            <Route exact path ='/disarm/:id' component={Dashboard}/>
           </div>
         </BrowserRouter>
       </div>

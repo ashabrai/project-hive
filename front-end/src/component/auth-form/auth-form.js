@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 const emptyState = {
   username: '',
   email: '',
-  password: '', //! Vinicio - this is the NAKED password
+  password: '',
+  accesscode:'',//! Vinicio - this is the NAKED password
 };
 
 
@@ -16,6 +17,7 @@ class AuthForm extends React.Component {
   }
 
   handleChange = (event) => {
+    // event.preventDefault();
     const { name, value } = event.target;
     this.setState({[name]: value});
   };
@@ -50,6 +52,7 @@ class AuthForm extends React.Component {
           onChange={this.handleChange}
         />
         { type !== 'login' ? signupJSX : undefined }
+
         <input className="signUp"
           name='password'
           placeholder='password'
@@ -57,6 +60,13 @@ class AuthForm extends React.Component {
           value={this.state.password}
           onChange={this.handleChange}
         />
+        <input className="signUp"
+               name='accesscode'
+               placeholder='placeholder'
+               type='accesscode'
+               value={this.state.accesscode}
+               onChange={this.handleChange}
+               />
         <button type='submit'>{type}</button>
       </form>
         </div>

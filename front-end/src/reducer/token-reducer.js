@@ -1,10 +1,10 @@
 
-
 const initialState = null;
 
 export default (state = initialState, { type, payload }) => {
   switch (type) {
     case 'TOKEN_SET':
+      console.log(payload);
       return payload;
     case 'TOKEN_REMOVE':
       return initialState;
