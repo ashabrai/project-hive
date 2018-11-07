@@ -39,7 +39,7 @@ Beta v1.0
 #### Following steps will be done with application
 
 - Clone repo
-- Open a few tabs in the same directory
+- Open a few tabs in the same directory on terminal
 - Back-end file, run -npm run dbOn
 - Back-end file, run -npm run start
 - Front-end file, run -npm run watch
