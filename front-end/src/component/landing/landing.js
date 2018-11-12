@@ -2,12 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import AlarmControls from '../alarm-controls/alarm-controls';
+// import Status from '../status/status';
 
 import AuthForm from '../auth-form/auth-form';
 import * as routes from '../../routes';
 import * as authActions from '../../action/auth';
 
 class Landing extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+    this.state.render ={};
+    this.state.render.alarmControls = false;
+  }
 
   handleLogin = (user) => {
     return this.props.pDoLogin(user)
@@ -19,13 +27,14 @@ class Landing extends React.Component {
 
   handleSignup = (user) => {
     return this.props.pDoSignUp(user)
-      .then(() => {
+      .then((response) => {
         this.props.history.push(routes.DASHBOARD);
       })
       .catch(console.error);
   };
 
   render() {
+
     const rootJSX = <div>
       <h2> Welcome to Save the Hive </h2>
       <Link to='signup'>Create an Account </Link>
@@ -33,7 +42,7 @@ class Landing extends React.Component {
     </div>;
 
     const signUpJSX = <div>
-      <h2> Create and Account </h2>
+      <h2> Create a Account </h2>
       <AuthForm type='signup' onComplete={this.handleSignup}/>
       <p> Already a member? </p>
       <Link to='/login'> Login Here </Link>
@@ -45,6 +54,11 @@ class Landing extends React.Component {
       <p> Do not have an account? </p>
       <Link to='/signup'>Account Creation</Link>
     </div>;
+
+      const armJSX = <div>
+        <h2> ENTER ACCESS CODE </h2>
+        <AlarmControls type ='arm' onComplete={this.handleSubmit}/>
+      </div>
 
     const { location } = this.props;
 

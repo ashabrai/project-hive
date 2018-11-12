@@ -12,6 +12,7 @@ const jsonParser = bodyParser.json();
 const router = module.exports = new express.Router();
 
 router.post('/user/signup', jsonParser, (request, response, next) => {
+  console.log(jsonParser);
   if (!request.body.password || !request.body.username || !request.body.accesscode || !request.body.email) { // eslint-disable-line
     return next(new HttpError(400, 'missing parameters'));
   }

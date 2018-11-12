@@ -21,7 +21,14 @@ const app = express();
 //-------------------------------------------------------------------------------------------------
 
 // middleware
-app.use(cors);
+// app.use(cors({
+//   credentials: true,
+// }));
+app.use(cors({
+  // origin: process.env.CORS_ORIGINS.split(' '),
+  credentials: true,
+}));
+
 app.use(loggerMiddleware);
 app.use(authAccountRoutes);
 app.use(armRoutes);
@@ -42,7 +49,7 @@ server.start = () => {
   return mongoose.connect(process.env.MONGODB_URI)
     .then(() => {
       return internalServer = app.listen(process.env.PORT, () => { // eslint-disable-line
-        logger.log(logger.INFO, `Server is on at PORT: ${process.env.PORT}`);
+        logger.log(logger.INFO, `Server is on at PORT:${process.env.PORT}`);
       });
     });
 };
