@@ -2,12 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import AlarmControls from '../alarm-controls/alarm-controls';
+// import Status from '../status/status';
 
 import AuthForm from '../auth-form/auth-form';
 import * as routes from '../../routes';
 import * as authActions from '../../action/auth';
 
 class Landing extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+    this.state.render ={};
+    this.state.render.alarmControls = false;
+  }
 
   handleLogin = (user) => {
     return this.props.pDoLogin(user)
@@ -19,7 +27,7 @@ class Landing extends React.Component {
 
   handleSignup = (user) => {
     return this.props.pDoSignUp(user)
-      .then(() => {
+      .then((response) => {
         this.props.history.push(routes.DASHBOARD);
       })
       .catch(console.error);
@@ -49,7 +57,7 @@ class Landing extends React.Component {
 
       const armJSX = <div>
         <h2> ENTER ACCESS CODE </h2>
-        <AccessForm type ='arm' onComplete={this.handleSubmit}/>
+        <AlarmControls type ='arm' onComplete={this.handleSubmit}/>
       </div>
 
     const { location } = this.props;

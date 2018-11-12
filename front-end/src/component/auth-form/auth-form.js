@@ -63,7 +63,7 @@ class AuthForm extends React.Component {
         <input className="signUp"
                name='accesscode'
                placeholder='placeholder'
-               type='accesscode'
+               type='text'
                value={this.state.accesscode}
                onChange={this.handleChange}
                />
