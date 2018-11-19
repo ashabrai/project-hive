@@ -11,11 +11,13 @@ class Dashboard extends React.Component {
   }
 
   render() {
-    return (
+
+      <p> Welcome to Project Hive</p>
       <React.Fragment>
       <Link to ='/viewstatus' className ="dashboardLinks"> Status </Link>
       <p>You will be able to have more control, with see whose </p>
       </React.Fragment>
+
     );
   }
 }
