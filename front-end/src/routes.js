@@ -4,6 +4,7 @@ export const ARM_ROUTE = '/arm/:id';
 export const DISARM_ROUTE = '/disarm/id';
 
 export const LOGIN = '/login';
+export const STATUS ='/status';
 export const ROOT = '/';
 export const DASHBOARD = '/dashboard';
 export const SIGNUP_FRONTEND = '/signup';
