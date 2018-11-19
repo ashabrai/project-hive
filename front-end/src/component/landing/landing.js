@@ -49,7 +49,7 @@ class Landing extends React.Component {
 
       const armJSX = <div>
         <h2> ENTER ACCESS CODE </h2>
-        <AccessForm type ='arm' onComplete={this.handleSubmit}/>
+        <AuthForm type ='arm' onComplete={this.handleSubmit}/>
       </div>
 
     const { location } = this.props;
@@ -71,12 +71,14 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   pDoSignUp: user => dispatch(authActions.signupRequest(user)),
   pDoLogin: user => dispatch(authActions.loginRequest(user)),
+  pDoAccesscode: user => dispatch(authActions.accesscodeRequest(user)),
 });
 
 Landing.propTypes = {
   location: PropTypes.object,
   pDoSignUp: PropTypes.func,
   pDoLogin: PropTypes.func,
+  pDoAccesscode: PropTypes.func,
 };
 
 export default connect(mapStateToProps,mapDispatchToProps)(Landing);
