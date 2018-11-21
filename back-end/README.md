@@ -44,6 +44,19 @@ Beta v1.0
 - npm install
 - Run 'node src/app.js' to turn on the server
 
+#### Google Login using Oauth
+
+* Coming soon, will have a completed login screen using google oauth. 
+
+* But our backend can access your account info by running in terminal:
+**nodemon**
+
+* While running -**npm run dbOn** on another tab
+* Finally running -**live server** in our front-end 
+
+A link should pop up for you to click, and once clicked it'll bring you to the google auth page to confirm
+that you are signing in to our program.
+
 ## Usage
 
 ![houselogo](src/lib/assets/project-images/project-hive-og-house-large-solo.png)
