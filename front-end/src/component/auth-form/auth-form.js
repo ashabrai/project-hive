@@ -131,6 +131,7 @@ class AuthForm extends React.Component {
                name='accesscode'
                placeholder='accesscode'
                type='accesscode'
+
                value={this.state.accesscode}
                onChange={this.handleChange}
                />
