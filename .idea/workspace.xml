@@ -61,7 +61,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="106" />
-          <entry key="gitignore" value="13" />
+          <entry key="gitignore" value="21" />
           <entry key="html" value="88" />
           <entry key="js" value="12796" />
           <entry key="json" value="29" />
@@ -76,7 +76,7 @@
           <entry key="JSON" value="29" />
           <entry key="JavaScript" value="12796" />
           <entry key="Markdown" value="958" />
-          <entry key="PLAIN_TEXT" value="13" />
+          <entry key="PLAIN_TEXT" value="21" />
           <entry key="SCSS" value="437" />
         </counts>
       </usages-collector>
@@ -97,8 +97,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/front-end/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="93" column="12" selection-start-line="93" selection-start-column="12" selection-end-line="93" selection-end-column="12" />
+            <state relative-caret-position="519">
+              <caret line="94" column="5" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -1289,12 +1289,12 @@
       <workItem from="1542664753337" duration="927000" />
       <workItem from="1542665715894" duration="2863000" />
       <workItem from="1542672267138" duration="15909000" />
-      <workItem from="1544047288602" duration="72000" />
+      <workItem from="1544047288602" duration="222000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76687000" />
+    <option name="totallyTimeSpent" value="76837000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="726" extended-state="0" />
@@ -1496,8 +1496,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/front-end/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="93" column="12" selection-start-line="93" selection-start-column="12" selection-end-line="93" selection-end-column="12" />
+        <state relative-caret-position="519">
+          <caret line="94" column="5" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
         </state>
       </provider>
     </entry>
